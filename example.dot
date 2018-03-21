@@ -1,4 +1,10 @@
 digraph G {
+    ///// start Heroku styles
+    graph [fontname="helvetica",fontsize=14,splines=true,pad=0.1,compound=true,color="grey60",fontcolor="grey10",fillcolor=grey95,style="filled"];
+    node [fontname="helvetica",fontsize=12,color=purple4,shape=box,style="rounded, filled",fontcolor=purple4,fillcolor=grey99,penwidth=2];
+    edge [fontname="helvetica",color=grey35,fontcolor=black,arrowhead="normal",penwidth=2,arrowsize=0.5];
+    ///// end Heroku styles
+
     subgraph cluster1 {
       label="Private Space A"
       "App A"
