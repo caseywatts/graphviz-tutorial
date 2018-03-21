@@ -1,4 +1,4 @@
 digraph G {
-    "App A" -> "Postgres Instance" [color=chartreuse3]
-    "App B" -> "Postgres Instance" [color=red, style=dashed]
+    "App A" -> "Postgres Instance\n(Private or Shield Plan)" [color=chartreuse3]
+    "App B" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
 }
