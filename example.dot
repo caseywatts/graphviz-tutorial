@@ -1,4 +1,4 @@
 digraph G {
-    "App A" -> "Postgres Instance" [label="yes"]
-    "App B" -> "Postgres Instance" [label="no"]
+    "App A" -> "Postgres Instance" [color=chartreuse3]
+    "App B" -> "Postgres Instance" [color=red]
 }
