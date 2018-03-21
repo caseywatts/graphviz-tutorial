@@ -14,6 +14,11 @@ digraph G {
       label="Private Space B"
       "App B"
     }
+    subgraph cluster3 {
+      label="Common Runtime"
+      "App C"
+    }
     "App A" -> "Postgres Instance\n(Private or Shield Plan)" [color=chartreuse3]
     "App B" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
+    "App C" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
 }
