@@ -1,4 +1,13 @@
 digraph G {
+    subgraph cluster1 {
+      label="Private Space A"
+      "App A"
+      "Postgres Instance\n(Private or Shield Plan)"
+    }
+    subgraph cluster2 {
+      label="Private Space B"
+      "App B"
+    }
     "App A" -> "Postgres Instance\n(Private or Shield Plan)" [color=chartreuse3]
     "App B" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
 }
