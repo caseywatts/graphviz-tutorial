@@ -1,0 +1,12 @@
+digraph G {
+    App [
+        shape=record
+        label="{App|id\nname}"
+    ]
+    User [
+        shape=record
+        label="{User|id\nname\nemail}"
+    ]
+    User [shape=record]
+    App -> User [arrowhead=crow, arrowtail=crow, dir=both]
+}
