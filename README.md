@@ -43,3 +43,21 @@ You'll want to use a tool with a two-pane layout - the left side is the source t
 
 ## Keeping track of diagrams
 You should keep track of your diagrams somewhere - I recommend in a github repo. Suggestion-instructions here in this [gist](https://caseywatts.com/graphviz).
+
+## Tutorial
+
+As we go through this, follow along in <graphviz.it> or a text editor plugin ([atom example](https://github.com/sverweij/atom-graphviz-preview-plus)).
+
+### Basic Structure
+Graphs are wrapped in `digraph G {}` - G is an arbitrary name. The way we use graphviz, we can't/won't do graphs with separate names.
+
+A graphviz **graph** has **nodes** connected by **edges** (I'll use the more colloquial term *connections*). Here is a simple example, with (optional) text labels on these the connections.
+
+```dot
+digraph G {
+    "App A" -> "Postgres Instance" [label="yes"]
+    "App B" -> "Postgres Instance" [label="no"]
+}
+```
+
+![](assets/README-43699752.png)
