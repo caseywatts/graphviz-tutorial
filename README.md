@@ -83,11 +83,11 @@ You can change many other properties of edges (connections), too!
 ```dot
 digraph G {
     "App A" -> "Postgres Instance" [arrowhead=crow, arrowtail=crow, dir=both]
-    "App B" -> "Postgres Instance" [color=red, style=dashed]
+    "App B" -> "Postgres Instance" [color=red, style=dashed, dir=none]
 }
 ```
 
-![](assets/README-c6d20753.png)
+![](assets/README-4164a80d.png)
 
 ### Multi-line Text
 
