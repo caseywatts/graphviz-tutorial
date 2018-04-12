@@ -198,3 +198,39 @@ digraph G {
 ```
 
 ![](assets/README-260ecd8a.png)
+
+
+### Compass Directions
+Many advanced style properties don't work perfectly - the rounded borders we added earlier using Heroku's global styles made a small gap at the top part of the red dotted lines. If we hadn't rounded the edges it would be lining up perfectly.
+
+This can look good though - we can push forward and adjust where it connects! We can use compass rose directions, such as North `:n` or Northwest `:nw`.
+
+```dot
+digraph G {
+    ///// start Heroku styles
+    graph [fontname="helvetica",fontsize=14,splines=true,pad=0.1,compound=true,color="grey60",fontcolor="grey10",fillcolor=grey95,style="filled"];
+    node [fontname="helvetica",fontsize=12,color=purple4,shape=box,style="rounded, filled",fontcolor=purple4,fillcolor=grey99,penwidth=2];
+    edge [fontname="helvetica",color=grey35,fontcolor=black,arrowhead="normal",penwidth=2,arrowsize=0.5];
+    ///// end Heroku styles
+
+    subgraph cluster3 {
+      label="Common Runtime"
+      "App C"
+    }
+    subgraph cluster1 {
+      label="Private Space A"
+      "App A"
+      "Postgres Instance\n(Private or Shield Plan)"
+    }
+    subgraph cluster2 {
+      label="Private Space B"
+      "App B"
+    }
+
+    "App A" -> "Postgres Instance\n(Private or Shield Plan)" [color=chartreuse3]
+    "App B":s -> "Postgres Instance\n(Private or Shield Plan)":e [color=red, style=dashed, dir=none]
+    "App C":s -> "Postgres Instance\n(Private or Shield Plan)":w [color=red, style=dashed, dir=none]
+}
+```
+
+![](assets/README-170416b4.png)
