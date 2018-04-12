@@ -73,3 +73,28 @@ digraph G {
 ```
 
 ![](assets/README-de5c0fb4.png)
+
+### More Connection Properties
+
+You can change many other properties of edges (connections), too!
+
+```dot
+digraph G {
+    "App A" -> "Postgres Instance" [arrowhead=crow, arrowtail=crow, dir=both]
+    "App B" -> "Postgres Instance" [color=red, style=dashed]
+}
+```
+
+![](assets/README-c6d20753.png)
+
+### Multi-line Text
+
+If you want to have more than one line of text in a node, you can manually put a newline line break using `\n`.
+
+```dot
+digraph G {
+    "App A" -> "Postgres Instance\n(Private or Shield Plan)"
+}
+```
+
+![](assets/README-37c14c17.png)
