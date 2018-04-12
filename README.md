@@ -4,6 +4,22 @@ It's a tool that can transform text input into a "directed graph" output, which 
 
 ![graphviz-it](https://gist.githubusercontent.com/caseywatts/be69bf941fa1f8e264bd07de698366a0/raw/7902020b86692b548b131e5cd4b8376687c6d898/graphviz-it.png)
 
+# Table of Contents
+
+- [Intro](#intro)
+  - [Goals](#goals)
+  - [Two-Pane Graphviz Editors](#two-pane-graphviz-editors)
+- [Tutorial](#tutorial)
+  - [Basic Structure](#basic-structure)
+  - [Colors & Quotes](#colors--quotes)
+  - [More Edge Properties](#more-edge-properties)
+  - [Multi-line Text](#multi-line-text)
+  - [Subgraph Boxes](#subgraph-boxes)
+  - [Global Styles](#global-styles)
+  - [Node Ordering](#node-ordering)
+  - [Compass Directions](#compass-directions)
+- [Keeping Track of Diagrams](#keeping-track-of-diagrams)
+
 # Graphviz Tutorial
 
 This is a step by step tutorial, introducing commonly used features of graphviz one at a time.
