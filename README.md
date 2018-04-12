@@ -46,7 +46,7 @@ You should keep track of your diagrams somewhere - I recommend in a github repo.
 
 ## Tutorial
 
-As we go through this, follow along in <graphviz.it> or a text editor plugin ([atom example](https://github.com/sverweij/atom-graphviz-preview-plus)).
+As we go through this, follow along in <graphviz.it> or a text editor plugin ([atom example](https://github.com/sverweij/atom-graphviz-preview-plus)). I also use a github-friendly paste-image [atom plugin](https://github.com/tlnagy/atom-markdown-image-assistant).
 
 ### Basic Structure
 Graphs are wrapped in `digraph G {}` - G is an arbitrary name. The way we use graphviz, we can't/won't do graphs with separate names.
@@ -61,3 +61,15 @@ digraph G {
 ```
 
 ![](assets/README-43699752.png)
+
+### Colors & Quotes
+For colors, you can use the [x11 palette](https://www.graphviz.org/doc/info/colors.html), or hex colors like `"#FF0000"`. Make sure to always use **double quotes** in graphviz. You will get errors with single quotes sometimes - like with hex colors. Sometimes you can get away with not using quotes at all, and that's really okay to do in graphviz. You'll know quickly whether it compiles or not.
+
+```dot
+digraph G {
+    AppA -> "Postgres Instance" [color=chartreuse3]
+    "App B" -> "Postgres Instance" [color="#FF0000"]
+}
+```
+
+![](assets/README-de5c0fb4.png)
