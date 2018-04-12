@@ -132,7 +132,7 @@ digraph G {
 
 If you want to style your graphs in generally the same way, you can declare some baseline attributes at the top. Any attribute you set on a node or edge below will override, like CSS.
 
-Here's an example with Heroku's base styles:
+Here's an example with Heroku's base styles. Also fleshing the example out more with another node.
 
 ```dot
 digraph G {
@@ -151,9 +151,14 @@ digraph G {
       label="Private Space B"
       "App B"
     }
+    subgraph cluster3 {
+      label="Common Runtime"
+      "App C"
+    }
     "App A" -> "Postgres Instance\n(Private or Shield Plan)" [color=chartreuse3]
     "App B" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
+    "App C" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
 }
 ```
 
-![](assets/README-fc0f90bd.png)
+![](assets/README-5fadf1a3.png)
