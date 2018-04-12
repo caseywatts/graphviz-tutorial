@@ -74,7 +74,7 @@ digraph G {
 
 ![](assets/README-de5c0fb4.png)
 
-### More Connection Properties
+### More Edge Properties
 
 You can change many other properties of edges (connections), too!
 
@@ -98,3 +98,27 @@ digraph G {
 ```
 
 ![](assets/README-37c14c17.png)
+
+### Subgraph Boxes
+
+You can draw a box around a group of nodes, and label it. This is a `subgraph`. The biggest gotcha here is that subgraph names must start with `cluster`. You label this using `label="My Subgraph Box Title"`. You can make the labels go to the bottom using `labelloc=b`, or move it explicitly to the top using `labelloc=t`.
+
+```dot
+digraph G {
+    subgraph cluster1 {
+      label="Private Space A"
+      "App A"
+      "Postgres Instance\n(Private or Shield Plan)"
+    }
+    subgraph cluster2 {
+      label="Private Space B"
+      labelloc=b
+      "App B"
+
+    }
+    "App A" -> "Postgres Instance\n(Private or Shield Plan)" [color=chartreuse3]
+    "App B" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
+}
+```
+
+![](assets/README-acf509cb.png)
