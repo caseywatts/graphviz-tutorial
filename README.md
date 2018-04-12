@@ -192,9 +192,9 @@ digraph G {
     }
 
     "App A" -> "Postgres Instance\n(Private or Shield Plan)" [color=chartreuse3]
-    "App B" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
-    "App C" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
+    "App B" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed, dir=none]
+    "App C" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed, dir=none]
 }
 ```
 
-![](assets/README-559a1fd2.png)
+![](assets/README-260ecd8a.png)
