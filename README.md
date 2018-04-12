@@ -162,3 +162,39 @@ digraph G {
 ```
 
 ![](assets/README-5fadf1a3.png)
+
+
+### Node Ordering
+ah! but sometimes ordering affects how it's drawn. If we want this to look more balanced, we can move "App C" up the file, and it'll be drawn sooner.
+
+Ordering affects how it's drawn in this case - but you can't always control the order things are drawn in. This limitation can be valuable in some ways, it helps you focus on the content more than presentation. This tool is not the ideal one for picture-perfect diagrams, but it's great at making good-enough looking, maintainable diagrams.
+
+```
+digraph G {
+    ///// start Heroku styles
+    graph [fontname="helvetica",fontsize=14,splines=true,pad=0.1,compound=true,color="grey60",fontcolor="grey10",fillcolor=grey95,style="filled"];
+    node [fontname="helvetica",fontsize=12,color=purple4,shape=box,style="rounded, filled",fontcolor=purple4,fillcolor=grey99,penwidth=2];
+    edge [fontname="helvetica",color=grey35,fontcolor=black,arrowhead="normal",penwidth=2,arrowsize=0.5];
+    ///// end Heroku styles
+
+    subgraph cluster3 {
+      label="Common Runtime"
+      "App C"
+    }
+    subgraph cluster1 {
+      label="Private Space A"
+      "App A"
+      "Postgres Instance\n(Private or Shield Plan)"
+    }
+    subgraph cluster2 {
+      label="Private Space B"
+      "App B"
+    }
+
+    "App A" -> "Postgres Instance\n(Private or Shield Plan)" [color=chartreuse3]
+    "App B" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
+    "App C" -> "Postgres Instance\n(Private or Shield Plan)" [color=red, style=dashed]
+}
+```
+
+![](assets/README-559a1fd2.png)
