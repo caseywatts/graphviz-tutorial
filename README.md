@@ -48,6 +48,8 @@ You should keep track of your diagrams somewhere - I recommend in a github repo.
 
 As we go through this, follow along in <graphviz.it> or a text editor plugin ([atom example](https://github.com/sverweij/atom-graphviz-preview-plus)). I also use a github-friendly paste-image [atom plugin](https://github.com/tlnagy/atom-markdown-image-assistant).
 
+The reference page I end up on most is the general [`attrs` one](https://www.graphviz.org/doc/info/attrs.html).
+
 ### Basic Structure
 Graphs are wrapped in `digraph G {}` - G is an arbitrary name. The way we use graphviz, we can't/won't do graphs with separate names.
 
