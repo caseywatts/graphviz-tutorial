@@ -38,7 +38,7 @@ You'll learn about:
 - grouping nodes using subgraphs
 - applying styles globally
 - ordering affects how it's drawn
-- specify where on the node the connection attachmes
+- specifying where on the node the connection attaches
 
 
 ### Two-Pane Graphviz Editors
